@@ -213,7 +213,7 @@ section {
   background-image:url('../bg.jpg');
   background-repeat: no-repeat;
   text-align: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .logo {
