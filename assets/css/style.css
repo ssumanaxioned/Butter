@@ -1,0 +1,517 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: ' ';
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  height: 600px;
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background-image:url('../bg.jpg');
+  background-repeat: no-repeat;
+  text-align: center;
+  /* overflow: hidden; */
+}
+
+.logo {
+  width: 120px;
+  margin-top: 20px;
+}
+
+.table {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: fade 0.5s 1 linear forwards;
+}
+
+.plate {
+  width: 280px;
+  bottom: 20px;
+  left: -30px;
+  transform: translateX(-200%);
+  position: absolute;
+  animation-name: right,right;
+  animation-duration: 1s,1s;
+  animation-fill-mode: forwards,forwards;
+  animation-delay: 1s,3s;
+  animation-direction: normal,reverse;
+  animation-iteration-count: 1,1;
+}
+
+h1 {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-200%);
+  color: red;
+  font-weight: 500;
+  font-size: 32px;
+  animation-name: right,right;
+  animation-duration: 1s,0.5s;
+  animation-fill-mode: forwards,forwards;
+  animation-delay: 2s,4s;
+  animation-direction: normal,reverse;
+  animation-iteration-count: 1,1;
+}
+
+h2 {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-200%);
+  color: red;
+  font-weight: 500;
+  font-size: 32px;
+  animation-name: right,right;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 7s, 9s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+h3 {
+  width: 90%;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-200%);
+  color: red;
+  font-weight: 500;
+  font-size: 32px;
+  animation-name: right,right;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 10s, 12s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+h4 {
+  width: 70%;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-200%);
+  color: red;
+  font-weight: 500;
+  font-size: 32px;
+  animation-name: right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 13s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+h5 {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  top: 40%;
+  transform: translate(-300%,-300%);
+  animation-name: cross;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 18s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+
+}
+
+.sad {
+  width: 200px;
+  right: 0;
+  bottom: 90px;
+  position: absolute;
+  transform: translateX(200%);
+  animation-name: left,left;
+  animation-duration: 1s,0.5s;
+  animation-fill-mode: forwards,forwards;
+  animation-delay: 2s,4s;
+  animation-direction: normal,reverse;
+  animation-iteration-count: 1,1;
+}
+
+.happy {
+    width: 230px;
+    right: 0;
+    bottom: 100px;
+    position: absolute;
+    transform: translateX(200%);
+    animation-name: left,left;
+    animation-duration: 1s, 0.5s;
+    animation-fill-mode: forwards,forwards;
+    animation-delay: 7s,9s;
+    animation-direction: normal, reverse;
+    animation-iteration-count: 1, 1;
+}
+
+.chef {
+  width: 230px;
+  right: 0;
+  bottom: 100px;
+  position: absolute;
+  transform: translateX(200%);
+  animation-name: left,left;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards,forwards;
+  animation-delay: 10s,12s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+.veg-mayo {
+  width: 100px;
+  bottom: 50px;
+  position: absolute;
+  transform: translateX(200%);
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 13s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+.hat {
+  width: 120px;
+  margin-left: 40px;
+  bottom: 280px;
+  position: absolute;
+  transform: translate(-300%,-300%);
+  animation-name: cross, movedown;
+  animation-duration: 0.5s, 1s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 14s, 16s;
+  animation-direction: normal, normal;
+  animation-iteration-count: 1, 1;
+}
+
+.sw-1 {
+  width: 250px;
+  margin-left: -30px;
+  left: 0;
+  bottom: 20px;
+  position: absolute;
+  transform: translateX(-200%);
+  z-index: 1;
+  animation-name: right, right;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 3s, 12s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+.sw-2 {
+  width: 150px;
+  margin-left: 20px;
+  left: 0;
+  bottom: 45px;
+  position: absolute;
+  transform: translateX(-200%);
+  z-index: 2;
+  animation-name: right, right;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 3s, 12s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+.sw-3 {
+  width: 150px;
+  margin-left: 20px;
+  bottom: 65px;
+  left: 0;
+  z-index: 5;
+  position: absolute;
+  transform: translateX(-200%);
+  animation-name: right, moveup, right;
+  animation-duration: 1s, 2s, 0.5s;
+  animation-fill-mode: forwards, forwards, forwards;
+  animation-delay: 3s, 5s, 12s;
+  animation-direction: normal, normal, reverse;
+  animation-iteration-count: 1, 1, 1;
+}
+
+.mayo {
+  width: 150px;
+  margin-left: 15px;
+  bottom: 55px;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  animation-name: fade, right;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 6.1s, 12s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: 1, 1;
+}
+
+.knife {
+  width: 100px;
+  margin-left: 20px;
+  bottom: 65px;
+  left: 0;
+  position: absolute;
+  transform: scale(0,0);
+  z-index: 4;
+  animation-name: knife;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+@keyframes right {
+  from { transform: translateX(-200%);}
+  to { transform: translateX(0);}
+}
+
+@keyframes left {
+  from { transform: translateX(200%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes cross {
+  from { transform: translate(-300%, -300%); }
+  to { transform: translate(0, 0); }
+}
+
+@keyframes moveup {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-100%);}
+  75% { transform: translateY(-100%); }
+  100% { transform: translateY(-5%); }
+}
+
+@keyframes movedown {
+  from { transform: translateY(0); }
+  to { transform: translateY(115px); }
+}
+
+ @keyframes knife {
+  0% { transform: scale(100%) rotate(-60deg); }
+  50% { transform: translateX(150%) rotate(-60deg); }
+  100% { transform: scale(0) rotate(-60deg); }
+}
+
+@keyframes mayo {
+  0% { transform: scale(100%,100%); }
+  100% { transform: scale(100%,100%); }
+}
+
+@keyframes fade {
+  0% { opacity: 0}
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
